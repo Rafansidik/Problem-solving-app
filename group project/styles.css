@@ -1,0 +1,134 @@
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(28, 27, 34);
+  margin: 2rem auto;
+
+  @media (width >= 344px) {
+    max-width: 320px;
+  }
+  @media (width >= 576px) {
+    max-width: 540px;
+  }
+  @media (width >= 768px) {
+    max-width: 720px;
+  }
+}
+
+menu {
+  list-style-type: none;
+}
+
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  user-select: none;
+  cursor: pointer;
+
+  --bgc: transparent;
+  --cp2: white 0%;
+  background-color: color-mix(in srgb, var(--bgc), var(--cp2));
+  scale: 1;
+  transition: all 0.4s;
+  will-change: scale;
+  font-weight: bold;
+  border-radius: 8px;
+
+  &:hover {
+    --cp2: white 20%;
+  }
+
+  &:active {
+    --cp2: black 20%;
+    scale: 0.9;
+  }
+}
+
+h1 {
+  color: darkorange;
+  margin: revert;
+  /* my style: */
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.exp__form {
+  border: 4px solid color-mix(in srgb, slateblue, black 50%);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.form__field {
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  font-size: 1.25rem;
+}
+
+.form__input {
+  appearance: none;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: inherit;
+  background-color: color-mix(in srgb, slateblue, black 25%);
+  border: 4px solid transparent;
+  border-radius: 8px;
+
+  &:focus {
+    outline: 2px solid lavender;
+  }
+}
+
+.exp__menu {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.exp__btn {
+  --bgc: teal;
+  width: calc(3ch + 1rem);
+  height: 4ex;
+  font-size: 1rem;
+}
+
+.exp__form__submit-btn {
+  --bgc: green;
+  width: calc(5ch + 1.5rem);
+  height: 4ex;
+  font-size: 1.5rem;
+}
+
+#output {
+  display: block;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: color-mix(in srgb, slateblue, black 10%);
+  border: 2px solid lavender;
+  border-radius: 8px;
+  white-space: pre-wrap; /* Ensures whitespace is respected for formatted JSON */
+  color: white;
+  font-family: monospace;
+}
+.exp__form__submit-btn {
+  width: 100%;
+  text-align: center;
+}

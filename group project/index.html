@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brute force solver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Brute force solver</h1>
+    </header>
+    <main>
+      <section>
+        <form class="exp__form" onsubmit="check(event)">
+          <div class="form__field">
+            <label for="exp__input" class="form__label">Expression:</label>
+            <input
+              id="exp__input"
+              type="text"
+              class="form__input"
+              readonly
+              required
+            />
+            <label for="L.H.S" class="form__label">Expression Value:</label>
+            <input id="L.H.S" type="text" class="form__input" required />
+            <menu class="exp__menu">
+              <li>
+                <button class="exp__btn" onclick="plus()" type="button">
+                  +
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="minus()">
+                  -
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="divide()">
+                  /
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="multiply()">
+                  *
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="mod()">
+                  mod
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="exponent()">
+                  ^
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="brackets_l()">
+                  (
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="brackets_r()">
+                  )
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="equals()">
+                  =
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="variable_x()">
+                  x
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="variable_y()">
+                  y
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_1()">
+                  1
+                </button>
+              </li>
+
+              <li>
+                <button class="exp__btn" type="button" onclick="number_2()">
+                  2
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_3()">
+                  3
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_4()">
+                  4
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_5()">
+                  5
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_6()">6</button>
+              </li>
+
+              <li>
+                <button class="exp__btn" type="button" onclick="number_7()">
+                  7
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_8()">
+                  8
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_9()">
+                  9
+                </button>
+              </li>
+              <li>
+                <button class="exp__btn" type="button" onclick="number_0()">
+                  0
+                </button>
+              </li>
+            </menu>
+          <div class="form__field">
+            <label for="exp__limit" class="form__label">Limit:</label>
+            <input
+              id="exp__limit"
+              type="number"
+              class="form__input"
+              min="1"
+              placeholder="1000"
+            />
+          </div>
+          <button class="exp__form__submit-btn">Check</button>
+        </form>
+      </section>
+      <section>
+        <div id="output"></div>
+      </section>
+    </main>
+    <script src="test.js"></script>
+  </body>
+</html>
